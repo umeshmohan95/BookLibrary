@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BookLib</title>
+</head>
+<body>
+ <h1>Book List</h1>
+
+        {% if books == []: %}
+        <p>Library is empty.</p>
+        {% endif %}
+
+    <ul>
+        {% for book in books :%}
+        <li>{{book.title}} - {{book.auther}} - {{book.rating}} </li>
+        {% endfor %}
+    </ul>
+<br>
+<a href="/add">Add New Books</a>
+
+</body>
+</html>
